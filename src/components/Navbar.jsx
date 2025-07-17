@@ -10,7 +10,7 @@ export default function Navbar() {
   if (confirmed) {
     setUser(null);
     alert('Logged out!');
-  }
+  
 };
 
   };
