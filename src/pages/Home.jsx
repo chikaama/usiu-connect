@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto">
       <h1 className="text-3xl font-bold text-center my-8">
-        Upcoming Campus Events
+        Upcoming Campus hike
       </h1>
 
       <div className="max-w-lg mx-auto mb-8 px-4">
