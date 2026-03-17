@@ -15,6 +15,7 @@ import Archive from './pages/Archive';
 import NotFound from './pages/NotFound';
 import EditEvent from './pages/EditEvent';
 import Register from './pages/Register';
+import FuelCalculator from './components/FuelCalculator';
 
 
 function App() {
@@ -25,14 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route
-              path="/dashboard"
-              element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            />
+
+            <Route path="/dashboard" element={<Dashboard />} />
+
 
             <Route path="/events/:id" element={<EventDetail />} />
             <Route path="/submit-event" element={<SubmitEvent />} />
@@ -41,6 +37,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/admin/edit/:id" element={<EditEvent />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/fuel-calculator" element={<FuelCalculator />} />
             <Route
               path="/admin"
               element={

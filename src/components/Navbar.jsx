@@ -39,6 +39,14 @@ export default function Navbar() {
             Archive
           </NavLink>
           <NavLink
+            to="/fuel-calculator"
+            className={({ isActive }) =>
+              isActive ? 'underline font-semibold' : 'hover:underline'
+            }
+          >
+            Fuel Calculator
+          </NavLink>
+          <NavLink
             to="/submit-event"
             className={({ isActive }) =>
               isActive ? 'underline font-semibold' : 'hover:underline'

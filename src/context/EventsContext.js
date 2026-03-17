@@ -8,15 +8,17 @@ export function EventsProvider({ children }) {
 
   const addEvent = (newEvent) => {
     const newId = events.length > 0 ? Math.max(...events.map(e => e.id)) + 1 : 1;
-    setEvents([...events, { ...newEvent, id: newId }]);
+    setEvents((prevEvents) => [...prevEvents, { ...newEvent, id: newId }]);
   };
 
   const editEvent = (updatedEvent) => {
-    setEvents(events.map(e => e.id === updatedEvent.id ? updatedEvent : e));
+    setEvents((prevEvents) =>
+      prevEvents.map((e) => (e.id === updatedEvent.id ? updatedEvent : e))
+    );
   };
 
   const deleteEvent = (id) => {
-    setEvents(events.filter(e => e.id !== id));
+    setEvents((prevEvents) => prevEvents.filter((e) => e.id !== id));
   };
 
   return (
